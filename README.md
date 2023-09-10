@@ -22,7 +22,7 @@ Execute the following line by line in the terminal：
 
 ```
 export LC_ALL=en_US.UTF-8
-apt update && apt -y install git && git clone https://github.com/ivanhao/pvetools.git
+apt update && apt -y install git && git clone https://github.com/duanegtr/pvetools-eng.git
 cd pvetools
 ./pvetools.sh
 ```
@@ -30,7 +30,7 @@ cd pvetools
 ### One-click brainless installation:
 
 ```
-echo "nameserver  8.8.8.8" >> /etc/resolv.conf && rm -rf pvetools && rm -rf /etc/apt/sources.list.d/pve-enterprise.list && export LC_ALL=en_US.UTF-8 && apt update && apt -y install git && git clone https://github.com/ivanhao/pvetools.git && echo "cd /root/pvetools && ./pvetools.sh" > pvetools/pvetools && chmod +x pvetools/pvetools* && ln -s /root/pvetools/pvetools /usr/local/bin/pvetools && pvetools
+echo "nameserver  8.8.8.8" >> /etc/resolv.conf && rm -rf pvetools && rm -rf /etc/apt/sources.list.d/pve-enterprise.list && export LC_ALL=en_US.UTF-8 && apt update && apt -y install git && git clone https://github.com/duanegtr/pvetools-eng.git && echo "cd /root/pvetools && ./pvetools.sh" > pvetools/pvetools && chmod +x pvetools/pvetools* && ln -s /root/pvetools/pvetools /usr/local/bin/pvetools && pvetools
 ```
 
 ###### Method 2: Download zip installation
@@ -307,7 +307,7 @@ new features:
 
 * Add the function of chroot custom installation path.
 * Add the function of chroot docker migration.
- [wiki](https://github.com/ivanhao/pvetools/wiki/m--1-%E9%85%8D%E7%BD%AEdocker-web%E7%95%8C%E9%9D%A2)
+ [wiki](https://github.com/duanegtr/pvetools-eng/wiki/m--1-%E9%85%8D%E7%BD%AEdocker-web%E7%95%8C%E9%9D%A2)
 
 ##### v2.0.7
 
@@ -317,7 +317,7 @@ new features:
 
 * Add the function of installing NFS.
 
-##### [](https://github.com/ivanhao/pvetools#v206-1)v2.0.6
+##### [](https://github.com/duanegtr/pvetools-eng#v206-1)v2.0.6
 
 Release time: 2019.11.20
 
@@ -326,7 +326,7 @@ new features:
 * Add commonly used tools, this version adds LAN scanning
 * Fix dockerd startup bug
 * 
-##### [](https://github.com/ivanhao/pvetools#v205)v2.0.5
+##### [](https://github.com/duanegtr/pvetools-eng#v205)v2.0.5
 
 release time：2019.11.14
 
@@ -388,7 +388,7 @@ Use root account to run.
 
 ```
 export LC_ALL=en_US.UTF-8
-apt update && apt -y install git && git clone https://github.com/ivanhao/pvetools.git
+apt update && apt -y install git && git clone https://github.com/duanegtr/pvetools-eng.git
 cd pvetools
 ./pvetools.sh
 ```
