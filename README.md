@@ -4,21 +4,21 @@
 proxmox ve tools script(debian9+ can use it).Including `email`, `samba`,` NFS  set zfs max ram`, `nested virtualization` ,`docker `, `pci passthrough` etc.
 for english user,please look the end of readme.
 
-这是一个为proxmox ve写的工具脚本（理论上debian9+可以用）。包括`配置邮件`，`samba`，`NFS`，`zfs`，`嵌套虚拟化`，`docker`，`硬盘直通`等功能。
+This is a tool script written for proxmox ve (theoretically debian9+ can be used). Including `configuration mail`, `samba`, `NFS`, `zfs`, `nested virtualization`, `docker`, `hard disk passthrough` and other functions。
 
 
 
-### 安装
+### Install
 
-##### 中国用户:
+##### Chinese users:
 
-###### 方式一：命令行安装
+###### Method 1: Command line installation
 
-> 需要用root账号来运行
+> Requires root account to run
 
-在终端中按行分别执行以下内容：
+Execute the following line by line in the terminal：
 
->强烈建议先删除企业源：`rm /etc/apt/sources.list.d/pve-enterprise.list`
+>It is strongly recommended to delete the enterprise source first：`rm /etc/apt/sources.list.d/pve-enterprise.list`
 
 ```
 export LC_ALL=en_US.UTF-8
@@ -27,34 +27,34 @@ cd pvetools
 ./pvetools.sh
 ```
 
-### 一键无脑安装:
+### One-click brainless installation:
 
 ```
 echo "nameserver  8.8.8.8" >> /etc/resolv.conf && rm -rf pvetools && rm -rf /etc/apt/sources.list.d/pve-enterprise.list && export LC_ALL=en_US.UTF-8 && apt update && apt -y install git && git clone https://github.com/ivanhao/pvetools.git && echo "cd /root/pvetools && ./pvetools.sh" > pvetools/pvetools && chmod +x pvetools/pvetools* && ln -s /root/pvetools/pvetools /usr/local/bin/pvetools && pvetools
 ```
 
-###### 方式二：下载zip安装
+###### Method 2: Download zip installation
 
 ![download](https://upload-images.jianshu.io/upload_images/4171480-49193f4b6f4040fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-- 建议使用方式一来安装，不建议直接下载单sh脚本使用，因为那样更新的功能会无法使用！
+- It is recommended to use method one to install. It is not recommended to directly download a single sh script for use, because then the updated function will not be available!
 
-- 如果网络无法使用，或命令行使用有困难，可以使用方式二下载zip包拷入系统中使用。
+- If the network is unavailable or you have difficulty using the command line, you can use method 2 to download the zip package and copy it into the system for use.。
 
-### 卸载
-1. 删除下载的pvetools目录
+### Uninstall
+1. Delete the downloaded pvetools directory
 
 
-### 运行
+### Run
 
-在shell中进入pvetools目录，输入
+Enter the pvetools directory in the shell and enter
 `
 ./pvetools.sh
 `
-* 如果提示没有权限，输入`chmod +x ./*.sh`
+* If prompted that there is no permission, enter `chmod +x ./*.sh`
 
-### 主界面
+### Main interface
 
 ![main](https://upload-images.jianshu.io/upload_images/4171480-501e3adb625c82fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -62,375 +62,321 @@ echo "nameserver  8.8.8.8" >> /etc/resolv.conf && rm -rf pvetools && rm -rf /etc
 
 
 
+Just select the corresponding option as needed.
 
-根据需要选择对应的选项即可。
+#### Configuration email instructions:
 
-#### 配置邮件说明：
-
-只有以下界面需要用tab键选成红框的内容,其他的一律无脑回车即可。
+Only in the following interfaces, you need to use the tab key to select the content in the red box. For the rest, just press Enter without thinking.
 
 ![mail](https://upload-images.jianshu.io/upload_images/4171480-2ee76fb89c0f253e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
-#### 如果这个脚本帮到你了，麻烦点一下右上角的star小星星^_^
+#### If this script helps you, please click the star in the upper right corner^_^
 
-## qq交流群: 878510703
+## QQ communication group: 878510703
 
 ![qq](http://upload-images.jianshu.io/upload_images/4171480-e0204ead0fb41d5e.jpg)
 
-## 如果觉得好的请捐赠一下^_^
+## If you think it’s good, please donate ^_^
 ![alipay](https://upload-images.jianshu.io/upload_images/4171480-04c3ebb5c11cfdf9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-感谢捐赠人员！
-
-捐赠列表：
-
-杨惠(来源qq)
-
-蓝蓝的天空（来源qq）
-
-久别重逢（来源qq）
-
-小呀嘛小Kiwi（来源qq)
-
-*兴乐（来源支付宝）
-
-孤独的根号三 （来源qq）
-
-我心依旧丶(来源qq)
-
-*俊磊（来源支付宝）
-
-*家鑫（来源支付宝）
-
-*小虎（来源支付宝）
-
-*杭（来源支付宝）
-
-*伟（来源支付宝）
-
-*棘（来源支付宝）
-
-zm （来源qq）
-
-*阳 (来源支付宝)
-
-**鑫 (来源支付宝)
-
-**尧 (来源支付宝)
-
-*潋 (来源支付宝)
-
-**泽 (来源支付宝)
-
-**涛 (来源支付宝)
-
-*韬 (来源支付宝)
-
-**旭 (来源支付宝)
-
-**明 (来源支付宝)
-
-**锐 (来源支付宝)
-
-# [版本说明]
-
 ##### v2.3.6
 
-发布时间：2023.02.16
+Releases：2023.02.16
 
 new feature:
 
-* 合并网友“for5million”提交的关于pci直通的修复。
+* Merge the repairs about pci passthrough submitted by netizen "for5million".
 
 ##### v2.3.5
 
-发布时间：2022.09.14
+Release time: 2022.09.14
 
-new feature:
+new features:
 
-* 修复docker无法安装的问题，更换alpine的安装源。
+* Fix the problem that docker cannot be installed and replace the installation source of alpine.
 
 ##### v2.3.2
 
-发布时间：2022.07.14
+Release time: 2022.07.14
 
-new feature:
+new features:
 
-* 温度显示上方增加CPU频率显示。
+* Added CPU frequency display above the temperature display.
 * add cpu frequency display.
 
 
 ##### v2.3.1
 
-发布时间：2022.07.13
+Release time: 2022.07.13
 
-* 调整省电模式powersave为conservative。
-* change cpufrequtils from 'powersave' to 'conservative'。
+* Adjust the power saving mode powersave to conservative.
+* change cpufrequtils from 'powersave' to 'conservative'.
 
 
 ##### v2.3.0
 
-发布时间：2022.05.30
+Release time: 2022.05.30
 
-new feature:
+new features:
 
-* 修复pve7（debian 11)后security更新源地址格式变动的影响。
+* Fix the impact of the security update source address format change after pve7 (debian 11).
 * fix pve7 (debian 11) security source address.
 
-* 添加pve7以上版本配置硬件直通里的参数`iommu=pt pcie_acs_override=downstream`
+* Add the parameter `iommu=pt pcie_acs_override=downstream` in the configuration of hardware passthrough for pve7 and above versions
 * add pve7　grub config `iommu=pt pcie_acs_override=downstream`
 
-* 删除默认.vimrc中重复的`set termencoding=unix`
+* Delete duplicate `set termencoding=unix` in default .vimrc
 * delete .vimrc duplicate termencoding setting `set termencoding=unix`
 
-* 增加去除订阅提示的修复
+*Add fix to remove subscription reminder
 * add reinstall proxmox-widget-toolkit to fix remove subscription failure.
 
 ##### v2.2.9
 
-发布时间：2022.05.29
+Release time: 2022.05.29
 
-new feature:
+new features:
 
-* 增加常用工具下的自动扩展ROOT分区可用空间，比如有些用户使用dd等方式克隆系统盘，更换大硬盘还原镜像后可以一键扩展分区
+* Increase the available space of automatic expansion of ROOT partition under common tools. For example, some users use dd and other methods to clone the system disk, and after replacing the large hard disk and restoring the image, they can expand the partition with one click.
 * add auto expand / partition size.
 
 ##### v2.2.8
 
-发布时间：2021.10.26
+Release time: 2021.10.26
 
-new feature:
+new features:
 
-* 优化pve7去订阅提示的判断和处理。
+* Optimize the judgment and processing of subscription prompts in pve7.
 * fix pve7 subscription note.
 
 ##### v2.2.7
 
-发布时间：2021.10.14
+Release time: 2021.10.14
 
-new feature:
+new features:
 
-* 在常用的工具下添加pve界面黑暗模式
+* Add dark mode to pve interface under commonly used tools
 * add proxmox ve darkmode interface to manyTools.
 
 ##### v2.2.6
 
-发布时间：2021.09.09
+Release time: 2021.09.09
 
 new feature:
 
-* 添加pve7的支持。
+* Add support for pve7.
 * add proxmox ve 7.x support.
 
 ##### v2.2.5
 
-发布时间：2020.12.16
+Release time: 2020.12.16
 
-new feature:
+new features:
 
-* 优化pve升级后温度安装提示判断逻辑。
+* Optimize the temperature installation prompt judgment logic after pve upgrade.
 * update sensors data install.
 
 ##### v2.2.4
 
-发布时间：2020.12.14
+Release time: 2020.12.14
 
-new feature:
+new features:
 
-* 修复温度显示界面高度自适应。
+* Fix the temperature display interface to be highly adaptive.
 * fix sensors display interface.
 
 ##### v2.2.3
 
-发布时间：2020.12.09
+Release time: 2020.12.09
 
-new feature:
+new features:
 
-* 增加对/etc/pve/qemu-server下的conf文件自动备份功能，可以选择备份路径和保留备份个数，建议备份到系统分区以外的虚拟机数据盘中，这样重装系统后方便直接恢复
+* Added automatic backup function for conf files under /etc/pve/qemu-server. You can select the backup path and the number of backups to keep. It is recommended to back up to a virtual machine data disk other than the system partition, so that it can be easily restored after reinstalling the system.
 
 
 ##### v2.2.2
 
-发布时间：2020.11.30
+Release time: 2020.11.30
 
-new feature:
+new features:
 
-* 根据群友`嗨 我是奶酪`的建议，添加pve 更新源地址为非订阅更新源
+* According to the suggestion of group friend `Hi I am Cheese`, add the pve update source address as a non-subscription update source
 
 
 
 ##### v2.2.0
 
-发布时间：2020.08.17
+Release time: 2020.08.17
 
-new feature:
+new features:
 
-* 增加USB设备做为系统盘的优化，在'常用工具'下。
+* Add USB device as system disk optimization, under 'Common Tools'.
 
 ##### v2.1.9
 
-发布时间：2020.07.15
+Release time: 2020.07.15
 
-new feature:
+new features:
 
-* 增加N卡vbios的提示功能，在'常用工具'下。
+* Added N card vbios prompt function under 'Common Tools'.
 
 ##### v2.1.8
 
-发布时间：2020.07.14
+Release time: 2020.07.14
 
-new feature:
+new features:
 
-* 修复cpu省电，还原配置无法恢复频率的问题。
+* Fixed the problem of CPU power saving and unable to restore frequency when restoring configuration.
 
 
 ##### v2.1.7
 
-发布时间：2020.05.19
+Release time: 2020.05.19
 
-new feature:
+new features:
 
-* 优化cpu省电提示，处理卸载后再次运行不安装cpufrequtils的问题。
+* Optimize the CPU power saving prompt and solve the problem of not installing cpufrequtils when running again after uninstalling.
 
 ##### v2.1.5
 
-发布时间：2020.03.28
+Release time: 2020.03.28
 
-new feature:
+new features:
 
-* 解决docker重启不能自动启动的问题。
+* Solve the problem that docker restart cannot start automatically.
 
 ##### v2.1.4
 
-发布时间：2020.02.21
+Release time: 2020.02.21
 
-new feature:
+new features:
 
-* 常用工具中增加释放内存、speedtest、bbr\bbr+、v2ray功能
+* Added the functions of releasing memory, speedtest, bbr\bbr+, and v2ray to common tools
 
 ##### v2.1.3
 
-发布时间：2019.12.24
+Release time: 2019.12.24
 
-new feature:
+new features:
 
-* 优化samba回收站配置,在设置共享文件夹时自动提示是否开启；可以单独增加和取消某个共享文件夹的回收站；
-* 优化web界面温度显示功能
+* Optimize the samba recycle bin configuration and automatically prompt whether to enable it when setting up a shared folder; you can add and cancel the recycle bin of a shared folder independently;
+* Optimize the temperature display function of the web interface
 
 ##### v2.1.2
 
-发布时间：2019.12.18
+Release time: 2019.12.18
 
-new feature:
+new features:
 
-* 增加samba回收站配置
+* Add samba recycle bin configuration
 
 ##### v2.1.1
 
-发布时间：2019.12.16
+Release time: 2019.12.16
 
-new feature:
+new features:
 
-* 常用工具中增加dns配置
+* Add dns configuration to common tools
+
 
 ##### v2.1.0
 
-发布时间：2019.12.09
+Release time: 2019.12.09
 
-new feature:
+new features:
 
-* 增加在pve中直接安装omv( [omvInPve](https://github.com/ivanhao/omvinpve))。
+* Added the ability to directly install omv in pve( [omvInPve](https://github.com/ivanhao/omvinpve))。
 
 ##### v2.0.9
 
-发布时间：2019.12.04
+Release time: 2019.12.04
 
-new feature:
+new features:
 
-* 增加samba共享文件夹权限自动配置，不再需要手工配置权限；同时删除共享文件夹会自动还原原来的用户组权限。
-  建议之前已使用的用户可以先删除旧的共享文件夹，手工恢复权限后，再用工具配置添加。
+* Added automatic configuration of samba shared folder permissions, no longer need to manually configure permissions; at the same time, deleting the shared folder will automatically restore the original user group permissions.
+  It is recommended that users who have used it before can delete the old shared folder first, restore the permissions manually, and then use the tool configuration to add it.
 
 ##### v2.0.8
 
-发布时间：2019.11.28
+Release time: 2019.11.28
 
-new feature:
+new features:
 
-*   增加chroot自定义安装路径的功能。
-*   增加chroot docker迁移的功能。
+* Add the function of chroot custom installation path.
+* Add the function of chroot docker migration.
  [wiki](https://github.com/ivanhao/pvetools/wiki/m--1-%E9%85%8D%E7%BD%AEdocker-web%E7%95%8C%E9%9D%A2)
 
 ##### v2.0.7
 
-发布时间：2019.11.25
+Release time: 2019.11.25
 
-new feature:
+new features:
 
-*   增加安装NFS的功能。
+* Add the function of installing NFS.
 
 ##### [](https://github.com/ivanhao/pvetools#v206-1)v2.0.6
 
-发布时间：2019.11.20
+Release time: 2019.11.20
 
-new feature:
+new features:
 
-*   增加常用工具，此版本增加了局域网扫描
-*   修复dockerd启动bug
-
+* Add commonly used tools, this version adds LAN scanning
+* Fix dockerd startup bug
+* 
 ##### [](https://github.com/ivanhao/pvetools#v205)v2.0.5
 
-发布时间：2019.11.14
+release time：2019.11.14
 
-new feature:
+new features:
 
-*   chroot优化,增加对alpine版本的判断，优化速度
-*   中文环境下包的下载全改到国内服务器
-*   docker配置国内源
-*   portainer改用docker pull的方式拉取镜像（之前使用tar包部署，github上下载包太慢）
-*   增加chroot后台管理功能，检测chroot的运行
-*   删除代码目录中的图片，改成简书图片链接
+* chroot optimization, increase the judgment of alpine version, optimize speed
+* The downloading of packages in the Chinese environment has been changed to the domestic server
+* Docker configures domestic sources
+*portainer uses docker pull instead to pull the image (previously, tar package deployment was used, and downloading the package on github was too slow)
+* Add chroot background management function to detect the operation of chroot
+* Delete the pictures in the code directory and change them to simple book picture links
 
 
 ##### v2.0.4
-发布时间：2019.11.06
+Release time: 2019.11.06
 
-new feature:
-- 增加docker的web界面（portainer)
-- 去除隐藏的命令输出，例如apt-get install的输出等。
-- chroot优化
+new features:
+- Add docker web interface (portainer)
+- Remove hidden command output, such as the output of apt-get install, etc.
+- chroot optimization
 
 
 ##### v2.0.3
-发布时间：2019.11.04
+Release time: 2019.11.04
 
-new feature:
-- 增加qm set映射物理硬盘的功能
+new features:
+- Add the function of qm set mapping physical hard disk
 
 
 ##### v2.0.2
-发布时间：2019.11.01
+Release time: 2019.11.01
 
-new feature:
-- 增加chroot功能，默认安装好Alpine
-- 增加docker功能，默认安装在Alpine中
-- bug修复
+new features:
+- Added chroot function, Alpine is installed by default
+- Added docker function, installed in Alpine by default
+- bug fixes
 
 ##### v2.0.1
-发布时间：2019.10.24
+Release time: 2019.10.24
 
-new feature:
-- 增加显卡直通的支持
+new features:
+- Added support for graphics card pass-through
 
 
 ##### v2.0
-发布时间：2019.10.01
+Release time: 2019.10.01
 
-new feature:
-- 界面修改为whiptail，交互性更好，不需要输入字母来选择
-- bug修复
+new features:
+- The interface is modified to whiptail, which is more interactive and does not require entering letters to select.
+- bug fixes
 
 ### installation method
 
@@ -438,7 +384,7 @@ new feature:
 
 ##### for english user:
 
-Use root accout to run.
+Use root account to run.
 
 ```
 export LC_ALL=en_US.UTF-8
